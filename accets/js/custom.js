@@ -26,11 +26,30 @@
 				scrollTop.style.display = 'block';
 			}else{
 				scrollTop.style.display = 'none';
-			}
-		}
+			};
+		};
 
 		scrollTop.addEventListener('click', backToTop);
 
 		function backToTop(){
 			window.scrollTo(0, 'smoth');
-		}
+		};
+
+		// Counter JS
+
+		$('.count-this').each(function () {
+
+			// Start the counting from a specified number - in this case, 0!
+		    $(this).prop('Counter', ).animate({
+		        Counter: $(this).text()
+		    }, {
+		    	// Speed of counter in ms, default animation style
+		        duration: 2000,
+		        easing: 'swing',
+		        step: function (now) {
+		        	// Round up the number
+		            $(this).text(Math.ceil(now));
+		        }
+		    });
+		});
+
